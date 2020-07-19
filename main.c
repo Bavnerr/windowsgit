@@ -55,7 +55,7 @@ int play(char array[],int playerNum) {
     drawBoard(array);
     printf("Player %d type a location : ", playerNum);
     scanf("%d",&move);
-    if (0 > move || move < 10) {
+    if (0 < move && move < 10) {
         toReplace = spots[move - 1];
         
         if (playerNum == 2 && array[toReplace] != 'X')
